@@ -20,11 +20,12 @@ export const setTypingValue = value =>({
 	payload:value
 });
 
-export const sendMessage = (message, userId) => ({
+export const sendMessage = (message, userId, chatBoxContainsReply) => ({
   type: SEND_MESSAGE,
   payload: {
     message,
-    userId
+    userId,
+    chatBoxContainsReply
   }
 });
 

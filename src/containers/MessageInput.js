@@ -8,8 +8,8 @@ const MessageInput = ({ value }) => {
 
   const handleSubmit = e => {
       e.preventDefault();
-      const { typing, activeUserId } = state;
-      store.dispatch(sendMessage(typing, activeUserId));
+      const { typing, activeUserId, chatBoxContainReply } = state;
+      store.dispatch(sendMessage(typing, activeUserId, chatBoxContainReply[0]));
     };
 
   const handleChange = e => {
